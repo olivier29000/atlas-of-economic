@@ -5,8 +5,6 @@ public class ProduitSitc {
 	Integer productId;
 	String productCode;
 	String productNameShortEn;
-	Integer productType;
-	String productTypeString;
 
 	/**
 	 * Constructeur
@@ -17,14 +15,12 @@ public class ProduitSitc {
 	 * @param productType
 	 * @param productTypeString
 	 */
-	public ProduitSitc(Integer productId, String productCode, String productNameShortEn, Integer productType,
-			String productTypeString) {
+	public ProduitSitc(Integer productId, String productCode, String productNameShortEn) {
 		super();
 		this.productId = productId;
 		this.productCode = productCode;
 		this.productNameShortEn = productNameShortEn;
-		this.productType = productType;
-		this.productTypeString = productTypeString;
+
 	}
 
 	/**
@@ -76,40 +72,6 @@ public class ProduitSitc {
 	 */
 	public void setProductNameShortEn(String productNameShortEn) {
 		this.productNameShortEn = productNameShortEn;
-	}
-
-	/**
-	 * @return the productType
-	 */
-	public Integer getProductType() {
-		return productType;
-	}
-
-	/**
-	 * Setter
-	 * 
-	 * @param productType
-	 *            the productType to set
-	 */
-	public void setProductType(Integer productType) {
-		this.productType = productType;
-	}
-
-	/**
-	 * @return the productTypeString
-	 */
-	public String getProductTypeString() {
-		return productTypeString;
-	}
-
-	/**
-	 * Setter
-	 * 
-	 * @param productTypeString
-	 *            the productTypeString to set
-	 */
-	public void setProductTypeString(String productTypeString) {
-		this.productTypeString = productTypeString;
 	}
 
 }

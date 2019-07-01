@@ -13,9 +13,9 @@ import fr.diginamic.dao.ProduitSitcDao;
 import fr.diginamic.model.ProduitSitc;
 import fr.diginamic.traitement_fichier.Exceptions.TechnicalException;
 
-public class ControllerProduitSitc {
+public abstract class ControllerProduitSitc {
 
-	public static void controllerPays() throws IOException {
+	public static void insererProduits() throws IOException {
 
 		try {
 			DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
@@ -31,24 +31,12 @@ public class ControllerProduitSitc {
 		}
 		List<ProduitSitc> listeDeProduitsSitc = new ArrayList();
 
-		for (int i = 0; i < 12; i++) {
-			listeDeLignes.remove(i);
-		}
+		listeDeLignes.remove(0);
 
 		for (String ligne : listeDeLignes) {
 			String[] attributsDuProduitSitc = ligne.split(",");
-
-			switch (attributsDuProduitSitc[0].charAt(0)) {
-			case '0':
-
-				break;
-
-			default:
-				break;
-			}
-
 			ProduitSitc produitSitc = new ProduitSitc((Integer) Integer.parseInt(attributsDuProduitSitc[0]),
-					attributsDuProduitSitc[1], attributsDuProduitSitc[2], 1, "hkbjk");
+					attributsDuProduitSitc[1], attributsDuProduitSitc[2]);
 			listeDeProduitsSitc.add(produitSitc);
 		}
 

@@ -9,8 +9,9 @@ import java.io.IOException;
 public class App {
 	public static void main(String[] args) throws IOException {
 
-		ControllerPays.controllerPays();
-		// test
+		// ControllerPays.controllerPays();
+		// ControllerProduitSitc.insererProduits();
+		ControllerPartenariats.insererLesPartenariats();
 
 	}
 }

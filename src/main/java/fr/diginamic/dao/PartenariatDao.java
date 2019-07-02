@@ -24,7 +24,7 @@ public class PartenariatDao {
 
 		try {
 			preparedStatement = ConnectionUtils.getInstance()
-					.prepareStatement("select * from partenariats limit " + pagination);
+					.prepareStatement("select * from partenariats union pays on partenariats.location_id=pays.location_id union productsSitc on partenariats.product_id = productsSitc.product_id  limit " + pagination);
 			resultSet = preparedStatement.executeQuery();
 			ConnectionUtils.doCommit();
 
